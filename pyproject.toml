@@ -1,0 +1,25 @@
+[project]
+name = "front-room"
+version = "0.1.0"
+description = "One screen. Every fan in the room."
+requires-python = ">=3.12"
+
+[tool.uv.workspace]
+members = ["engine", "agents"]
+
+[dependency-groups]
+dev = ["pytest>=8.4", "ruff>=0.13"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["frontroom_agents", "frontroom_engine"]
+
+[tool.pytest.ini_options]
+testpaths = ["engine/tests", "agents/tests"]
+markers = ["live: calls Azure OpenAI; runs only with FRONTROOM_LIVE=1"]

@@ -1,0 +1,65 @@
+.card {
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background: var(--surface-raised);
+}
+
+.goal {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chalk {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 0.25;
+}
+
+.spot {
+  fill: var(--line-strong);
+}
+
+.frame {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 0.5;
+}
+
+.path {
+  stroke: var(--ink);
+  stroke-width: 0.45;
+  stroke-linecap: round;
+}
+
+/* What the keeper could see, cut short by the defender. */
+.sightline {
+  stroke: var(--ink-muted);
+  stroke-width: 0.3;
+  stroke-dasharray: 0.8 0.6;
+}
+
+.shooter {
+  fill: var(--club-kestrel);
+  stroke: var(--surface);
+  stroke-width: 0.3;
+}
+
+.defender {
+  fill: var(--club-ashvale);
+  stroke: var(--surface);
+  stroke-width: 0.3;
+}
+
+.keeper {
+  fill: var(--pitch);
+  stroke: var(--surface);
+  stroke-width: 0.3;
+}
+
+.label {
+  font-family: var(--font-text);
+  font-size: 1.7px;
+  font-weight: 700;
+  fill: var(--ink);
+}

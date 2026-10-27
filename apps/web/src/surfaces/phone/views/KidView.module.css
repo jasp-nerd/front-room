@@ -1,0 +1,98 @@
+/* Leo's pick won the TV, which is the thing the room shares: the one place a phone goes fully robin. */
+.picked {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  min-height: 188px;
+  padding: var(--space-5) var(--space-2) 0 var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--signal);
+  color: var(--on-signal);
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-self: center;
+  padding-bottom: var(--space-4);
+}
+
+.pip {
+  flex: none;
+  margin-bottom: -4px;
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-wrap: balance;
+}
+
+.lede {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.story li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.step {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.choices {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* Big pills on a lip, like the buttons: a quiz you press. */
+.choice {
+  flex: 1;
+  min-height: 64px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--accent-wash);
+  color: var(--ink);
+  box-shadow: 0 4px 0 var(--accent);
+  font-family: var(--font-score);
+  font-size: 36px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.choice:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--accent);
+}

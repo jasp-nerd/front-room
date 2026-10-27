@@ -1,0 +1,142 @@
+/* Three picks, each a card: what it was and who wanted it, an arrow, and where it went. */
+.story {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.picks {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pick {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px 150px;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.what {
+  display: grid;
+  gap: 6px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.wanted {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.faces {
+  display: flex;
+}
+
+.faces > * + * {
+  margin-left: -8px;
+}
+
+.why {
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--ink-muted);
+}
+
+/* A chunky arrow drawn in CSS: a bar and a head. */
+.arrow {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--ink-muted);
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 6px solid var(--ink-muted);
+  border-right: 6px solid var(--ink-muted);
+  border-radius: 2px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.where {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  font-size: 15px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.spot {
+  height: 52px;
+  width: auto;
+}
+
+.pick[data-won] {
+  background: var(--signal);
+  color: #ffffff;
+}
+
+.pick[data-won] .wanted,
+.pick[data-won] .why {
+  color: #ffffffe6;
+}
+
+.pick[data-won] .arrow,
+.pick[data-won] .arrow::after {
+  border-color: #ffffff;
+  background: #ffffff;
+}
+
+.pick[data-won] .arrow::after {
+  background: none;
+}
+
+@media (max-width: 560px) {
+  .pick {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .where {
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .spot {
+    height: 40px;
+  }
+}

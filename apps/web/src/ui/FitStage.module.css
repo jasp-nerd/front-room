@@ -1,0 +1,75 @@
+/* The whole window, never more: a header bar, then the picture centred in what's left. */
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) clamp(16px, 3vw, 40px);
+  border-bottom: 2px solid var(--line);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.area {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.home {
+  flex: none;
+  display: flex;
+}
+
+.line {
+  flex: 1;
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.action {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: var(--radius-pill);
+  background: var(--signal);
+  box-shadow: 0 4px 0 var(--signal-lip);
+  color: var(--on-signal);
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.action:hover {
+  background: var(--signal-hover);
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .line {
+    order: 3;
+    flex-basis: 100%;
+    font-size: 14px;
+  }
+
+  .action {
+    margin-left: auto;
+  }
+}

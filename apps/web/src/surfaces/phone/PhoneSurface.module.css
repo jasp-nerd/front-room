@@ -1,0 +1,145 @@
+/* The board: four fans, each on a field in their own colour, with their phone standing in it. Four across
+   at 1920 × 1080 (the video's frame), or two by two for a phone held upright. */
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 440px);
+  justify-content: center;
+  align-content: start;
+  gap: 28px;
+  width: var(--board-width);
+  height: var(--board-height);
+  margin: 0;
+  padding: 40px 0 0;
+  list-style: none;
+  background: var(--surface);
+}
+
+.figure {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  width: 440px;
+  margin: 0;
+}
+
+.figure::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 34%;
+  border-radius: var(--radius-l);
+  background: var(--field);
+}
+
+.figure[data-colour="sky"] {
+  --field: var(--sky);
+}
+.figure[data-colour="sun"] {
+  --field: var(--sun);
+}
+.figure[data-colour="pitch"] {
+  --field: var(--pitch);
+}
+.figure[data-colour="pink"] {
+  --field: var(--pink);
+}
+
+.who {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  align-self: stretch;
+  padding: var(--space-4) var(--space-5) 0;
+}
+
+.face {
+  flex: none;
+  display: grid;
+  place-items: end center;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.watches {
+  display: block;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+/* Text on pitch green is white; the other fields take ink. */
+.figure[data-colour="pitch"] .who {
+  color: #ffffff;
+}
+
+/* The phone shrinks a little so face, phone and caption fit the 1080 frame. */
+.device {
+  position: relative;
+  zoom: 0.88;
+}
+
+.outcome {
+  margin: 0;
+  position: relative;
+  padding: 0 var(--space-4);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.single {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-6);
+  background: var(--surface-raised);
+}
+
+.waiting {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-9);
+}
+
+.waitingField {
+  display: grid;
+  place-items: end center;
+  height: 300px;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--accent);
+}
+
+.waitingTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.waitingLine {
+  margin: 0;
+  color: var(--ink-muted);
+  text-wrap: pretty;
+}

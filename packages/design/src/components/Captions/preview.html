@@ -1,0 +1,31 @@
+<!-- @dsCard group="Broadcast" height=200 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Captions</title>
+<style>
+  html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-text); }
+  .stage { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; padding: 32px; }
+  .item { display: flex; flex-direction: column; gap: 12px; }
+  .label { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+  .day { padding: 16px; border-radius: 16px; background: var(--surface-raised); }
+  .scale { transform-origin: top left; }
+  .pitch { padding: 24px; background: #1c3a28; }
+</style>
+</head>
+<body>
+<div id="root" class="stage"></div>
+<script>
+  const h = React.createElement;
+  const F = FrontRoom;
+  const item = (label, child, className) => h("div", { className: "item" }, h("p", { className: "label" }, label), className ? h("div", { className }, child) : child);
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    item("One line per language in the room", h("div", { className: "pitch" }, h(F.Captions, { lines: [
+      { lang: "en", text: "Replay of the build-up to Okafor's goal" },
+      { lang: "es", text: "Repetición de la jugada del gol de Okafor" },
+    ] })))
+  );
+</script>
+</body>
+</html>

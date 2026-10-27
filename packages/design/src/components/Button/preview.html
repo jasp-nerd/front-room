@@ -1,0 +1,30 @@
+<!-- @dsCard group="Controls" height=180 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Button</title>
+<style>
+  html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-text); }
+  .stage { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; padding: 32px; }
+  .item { display: flex; flex-direction: column; gap: 12px; }
+  .label { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+  .day { padding: 16px; border-radius: 16px; background: var(--surface-raised); }
+  .scale { transform-origin: top left; }
+</style>
+</head>
+<body>
+<div id="root" class="stage"></div>
+<script>
+  const h = React.createElement;
+  const F = FrontRoom;
+  const item = (label, child, className) => h("div", { className: "item" }, h("p", { className: "label" }, label), className ? h("div", { className }, child) : child);
+  ReactDOM.createRoot(document.getElementById("root")).render(h("div", { style: { display: "flex", gap: 32, flexWrap: "wrap" } },
+    item("Primary (robin, on a lip)", h(F.Button, null, "Got it")),
+    item("Secondary (raised)", h(F.Button, { variant: "secondary" }, "Hold until the next stoppage")),
+    item("Join (the big robin button, only for joining a room)", h("div", { style: { width: 358 } }, h(F.Button, { variant: "join", block: true }, "Join the room"))),
+    item("Disabled", h(F.Button, { disabled: true }, "Kestrel score"))
+  ));
+</script>
+</body>
+</html>

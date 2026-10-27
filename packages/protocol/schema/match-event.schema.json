@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "match-event.schema.json",
+  "title": "MatchEvent",
+  "description": "One on-ball action or match state change from the synthetic feed. Action types follow SPADL so the same models run on open data.",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/Id" },
+    "matchId": { "$ref": "common.schema.json#/$defs/Id" },
+    "seq": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Order in the feed. Amendments reuse the seq of the event they replace."
+    },
+    "period": { "type": "integer", "enum": [1, 2] },
+    "clockMs": { "$ref": "common.schema.json#/$defs/ClockMs" },
+    "side": { "$ref": "common.schema.json#/$defs/Side" },
+    "playerId": { "$ref": "common.schema.json#/$defs/Id" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "cross",
+        "throw_in",
+        "corner",
+        "free_kick",
+        "goal_kick",
+        "dribble",
+        "take_on",
+        "shot",
+        "penalty",
+        "keeper_save",
+        "tackle",
+        "interception",
+        "clearance",
+        "press",
+        "foul",
+        "card",
+        "substitution",
+        "goal",
+        "var_check",
+        "var_decision"
+      ]
+    },
+    "result": { "type": "string", "enum": ["success", "fail", "offside", "own_goal", "none"] },
+    "start": { "$ref": "common.schema.json#/$defs/PitchPoint" },
+    "end": { "$ref": "common.schema.json#/$defs/PitchPoint" },
+    "bodyPart": { "type": "string", "enum": ["foot", "head", "other"] },
+    "detail": {
+      "description": "Type-specific extras: card colour, the target of a press, the outcome of a VAR decision.",
+      "type": "object",
+      "additionalProperties": { "type": ["string", "number", "boolean"] }
+    },
+    "amends": {
+      "$ref": "common.schema.json#/$defs/Id",
+      "description": "Set when this event corrects an earlier one."
+    }
+  },
+  "required": ["id", "matchId", "seq", "period", "clockMs", "side", "type", "result", "start"],
+  "additionalProperties": false
+}

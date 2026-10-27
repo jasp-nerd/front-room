@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.artifact/
+.taste-skill/
+
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+data/raw/
+data/generated/
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+.azure/
+
+# Kept out of the repository: the film project and its renders, one-off data scripts, and working notes.
+video/
+tools/
+docs/

@@ -1,0 +1,35 @@
+{
+  "name": "@frontroom/design",
+  "private": true,
+  "type": "module",
+  "description": "Front Room tokens, fonts, logo, drawings (Pip, the cast) and React components.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./dist/tokens.css",
+    "./fonts/*": "./fonts/*",
+    "./logo/*": "./logo/*",
+    "./crests/*": "./crests/*",
+    "./illustration/*": "./illustration/*"
+  },
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs",
+    "artifact": "node scripts/build-tokens.mjs && node scripts/build-bundle.mjs && node scripts/build-artifact.mjs",
+    "typecheck": "tsc --noEmit",
+    "bundle": "node scripts/build-bundle.mjs"
+  },
+  "peerDependencies": {
+    "react": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/qrcode": "1.5.5",
+    "@types/react": "18.3.31",
+    "esbuild": "0.28.2",
+    "react": "18.3.1",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4"
+  }
+}

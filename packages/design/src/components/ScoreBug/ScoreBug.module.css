@@ -1,0 +1,52 @@
+/* A solid white card on a lip, so it reads over any picture: club chips either side, the minute on a sun tab. */
+.bug {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 72px;
+  padding: 0 10px 0 12px;
+  border-radius: 20px;
+  background: var(--plate);
+  box-shadow: 0 6px 0 var(--plate-lip);
+  font-family: var(--font-score);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-on-plate);
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.dash {
+  font-size: 32px;
+  color: var(--ink-muted);
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-left: 4px;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: var(--sun);
+  color: var(--ink);
+  font-size: 32px;
+  font-weight: 700;
+}

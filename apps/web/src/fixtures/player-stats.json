@@ -1,0 +1,447 @@
+{
+  "matchId": "sl-kes-ash-7",
+  "asOf": {
+    "period": 2,
+    "clockMs": 1001859
+  },
+  "teams": {
+    "home": {
+      "name": "Kestrel FC",
+      "short": "KES",
+      "possession": 56,
+      "shots": 16,
+      "shotsOnTarget": 12,
+      "passAccuracy": 80,
+      "distanceKm": 56.9
+    },
+    "away": {
+      "name": "Ashvale Athletic",
+      "short": "ASH",
+      "possession": 44,
+      "shots": 8,
+      "shotsOnTarget": 6,
+      "passAccuracy": 73,
+      "distanceKm": 56.9
+    }
+  },
+  "players": {
+    "kes-01-corrigan": {
+      "name": "Corrigan",
+      "label": "Corrigan",
+      "starting": true,
+      "side": "home",
+      "number": 1,
+      "distanceKm": 2.74,
+      "topSpeedKmh": 23.5,
+      "sprints": 0,
+      "passes": 5,
+      "passesCompleted": 2,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 40,
+      "inTheMove": {
+        "metres": 26,
+        "topSpeedKmh": 17.3
+      }
+    },
+    "kes-02-ibarra": {
+      "name": "Ibarra",
+      "label": "J. Ibarra",
+      "starting": true,
+      "side": "home",
+      "number": 2,
+      "distanceKm": 5.39,
+      "topSpeedKmh": 30.1,
+      "sprints": 9,
+      "passes": 19,
+      "passesCompleted": 12,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 63,
+      "inTheMove": {
+        "metres": 54,
+        "topSpeedKmh": 12.6
+      }
+    },
+    "kes-04-renner": {
+      "name": "Renner",
+      "label": "Renner",
+      "starting": true,
+      "side": "home",
+      "number": 4,
+      "distanceKm": 4.65,
+      "topSpeedKmh": 29.5,
+      "sprints": 6,
+      "passes": 7,
+      "passesCompleted": 5,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 71,
+      "inTheMove": {
+        "metres": 41,
+        "topSpeedKmh": 10.8
+      }
+    },
+    "kes-05-fenner": {
+      "name": "Fenner",
+      "label": "Fenner",
+      "starting": true,
+      "side": "home",
+      "number": 5,
+      "distanceKm": 4.56,
+      "topSpeedKmh": 28.2,
+      "sprints": 2,
+      "passes": 5,
+      "passesCompleted": 4,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 80,
+      "inTheMove": {
+        "metres": 45,
+        "topSpeedKmh": 11.0
+      }
+    },
+    "kes-03-hartigan": {
+      "name": "Hartigan",
+      "label": "Hartigan",
+      "starting": true,
+      "side": "home",
+      "number": 3,
+      "distanceKm": 5.36,
+      "topSpeedKmh": 31.5,
+      "sprints": 6,
+      "passes": 21,
+      "passesCompleted": 17,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 81,
+      "inTheMove": {
+        "metres": 46,
+        "topSpeedKmh": 12.1
+      }
+    },
+    "kes-06-mensah": {
+      "name": "Mensah",
+      "label": "Mensah",
+      "starting": true,
+      "side": "home",
+      "number": 6,
+      "distanceKm": 4.62,
+      "topSpeedKmh": 24.7,
+      "sprints": 0,
+      "passes": 27,
+      "passesCompleted": 25,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 93,
+      "inTheMove": {
+        "metres": 58,
+        "topSpeedKmh": 18.9
+      }
+    },
+    "kes-08-petrov": {
+      "name": "Petrov",
+      "label": "T. Petrov",
+      "starting": true,
+      "side": "home",
+      "number": 8,
+      "distanceKm": 4.54,
+      "topSpeedKmh": 26.6,
+      "sprints": 0,
+      "passes": 26,
+      "passesCompleted": 23,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 88,
+      "inTheMove": {
+        "metres": 47,
+        "topSpeedKmh": 14.5
+      }
+    },
+    "kes-10-diallo": {
+      "name": "Diallo",
+      "label": "Diallo",
+      "starting": true,
+      "side": "home",
+      "number": 10,
+      "distanceKm": 6.02,
+      "topSpeedKmh": 29.2,
+      "sprints": 14,
+      "passes": 68,
+      "passesCompleted": 56,
+      "shots": 1,
+      "shotsOnTarget": 1,
+      "passAccuracy": 82,
+      "inTheMove": {
+        "metres": 54,
+        "topSpeedKmh": 17.5
+      }
+    },
+    "kes-07-rossetti": {
+      "name": "Rossetti",
+      "label": "Rossetti",
+      "starting": true,
+      "side": "home",
+      "number": 7,
+      "distanceKm": 6.13,
+      "topSpeedKmh": 30.3,
+      "sprints": 18,
+      "passes": 61,
+      "passesCompleted": 46,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 75,
+      "inTheMove": {
+        "metres": 61,
+        "topSpeedKmh": 17.7
+      }
+    },
+    "kes-09-okafor": {
+      "name": "Okafor",
+      "label": "Okafor",
+      "starting": true,
+      "side": "home",
+      "number": 9,
+      "distanceKm": 6.65,
+      "topSpeedKmh": 31.7,
+      "sprints": 23,
+      "passes": 37,
+      "passesCompleted": 29,
+      "shots": 11,
+      "shotsOnTarget": 9,
+      "passAccuracy": 78,
+      "inTheMove": {
+        "metres": 76,
+        "topSpeedKmh": 19.4
+      }
+    },
+    "kes-11-gilchrist": {
+      "name": "Gilchrist",
+      "label": "E. Gilchrist",
+      "starting": true,
+      "side": "home",
+      "number": 11,
+      "distanceKm": 6.2,
+      "topSpeedKmh": 31.1,
+      "sprints": 23,
+      "passes": 39,
+      "passesCompleted": 33,
+      "shots": 4,
+      "shotsOnTarget": 2,
+      "passAccuracy": 85,
+      "inTheMove": {
+        "metres": 57,
+        "topSpeedKmh": 17.2
+      }
+    },
+    "ash-01-gilchrist": {
+      "name": "Gilchrist",
+      "label": "H. Gilchrist",
+      "starting": true,
+      "side": "away",
+      "number": 1,
+      "distanceKm": 2.33,
+      "topSpeedKmh": 21.6,
+      "sprints": 0,
+      "passes": 3,
+      "passesCompleted": 1,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 33,
+      "inTheMove": {
+        "metres": 25,
+        "topSpeedKmh": 17.5
+      }
+    },
+    "ash-02-brannigan": {
+      "name": "Brannigan",
+      "label": "Brannigan",
+      "starting": true,
+      "side": "away",
+      "number": 2,
+      "distanceKm": 5.38,
+      "topSpeedKmh": 31.9,
+      "sprints": 11,
+      "passes": 13,
+      "passesCompleted": 10,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 77,
+      "inTheMove": {
+        "metres": 57,
+        "topSpeedKmh": 16.7
+      }
+    },
+    "ash-05-stavros": {
+      "name": "Stavros",
+      "label": "Stavros",
+      "starting": true,
+      "side": "away",
+      "number": 5,
+      "distanceKm": 4.62,
+      "topSpeedKmh": 28.5,
+      "sprints": 4,
+      "passes": 5,
+      "passesCompleted": 3,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 60,
+      "inTheMove": {
+        "metres": 54,
+        "topSpeedKmh": 12.5
+      }
+    },
+    "ash-36-petrov": {
+      "name": "Petrov",
+      "label": "R. Petrov",
+      "starting": true,
+      "side": "away",
+      "number": 36,
+      "distanceKm": 4.58,
+      "topSpeedKmh": 28.9,
+      "sprints": 7,
+      "passes": 3,
+      "passesCompleted": 3,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 100,
+      "inTheMove": {
+        "metres": 50,
+        "topSpeedKmh": 11.3
+      }
+    },
+    "ash-03-ibarra": {
+      "name": "Ibarra",
+      "label": "Y. Ibarra",
+      "starting": true,
+      "side": "away",
+      "number": 3,
+      "distanceKm": 5.24,
+      "topSpeedKmh": 30.7,
+      "sprints": 11,
+      "passes": 18,
+      "passesCompleted": 12,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 67,
+      "inTheMove": {
+        "metres": 51,
+        "topSpeedKmh": 16.8
+      }
+    },
+    "ash-06-pardoe": {
+      "name": "Pardoe",
+      "label": "Pardoe",
+      "starting": true,
+      "side": "away",
+      "number": 6,
+      "distanceKm": 4.61,
+      "topSpeedKmh": 27.6,
+      "sprints": 1,
+      "passes": 22,
+      "passesCompleted": 20,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 91,
+      "inTheMove": {
+        "metres": 73,
+        "topSpeedKmh": 19.9
+      }
+    },
+    "ash-04-lund": {
+      "name": "Lund",
+      "label": "Lund",
+      "starting": true,
+      "side": "away",
+      "number": 4,
+      "distanceKm": 5.34,
+      "topSpeedKmh": 27.9,
+      "sprints": 2,
+      "passes": 30,
+      "passesCompleted": 26,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 87,
+      "inTheMove": {
+        "metres": 64,
+        "topSpeedKmh": 17.2
+      }
+    },
+    "ash-08-juhl": {
+      "name": "Juhl",
+      "label": "Juhl",
+      "starting": true,
+      "side": "away",
+      "number": 8,
+      "distanceKm": 5.28,
+      "topSpeedKmh": 28.3,
+      "sprints": 1,
+      "passes": 40,
+      "passesCompleted": 28,
+      "shots": 0,
+      "shotsOnTarget": 0,
+      "passAccuracy": 70,
+      "inTheMove": {
+        "metres": 66,
+        "topSpeedKmh": 17.1
+      }
+    },
+    "ash-07-asante": {
+      "name": "Asante",
+      "label": "Asante",
+      "starting": true,
+      "side": "away",
+      "number": 7,
+      "distanceKm": 6.63,
+      "topSpeedKmh": 31.1,
+      "sprints": 29,
+      "passes": 40,
+      "passesCompleted": 28,
+      "shots": 1,
+      "shotsOnTarget": 1,
+      "passAccuracy": 70,
+      "inTheMove": {
+        "metres": 63,
+        "topSpeedKmh": 18.6
+      }
+    },
+    "ash-09-moreau": {
+      "name": "Moreau",
+      "label": "Moreau",
+      "starting": true,
+      "side": "away",
+      "number": 9,
+      "distanceKm": 6.31,
+      "topSpeedKmh": 30.7,
+      "sprints": 14,
+      "passes": 17,
+      "passesCompleted": 12,
+      "shots": 5,
+      "shotsOnTarget": 4,
+      "passAccuracy": 71,
+      "inTheMove": {
+        "metres": 57,
+        "topSpeedKmh": 17.1
+      }
+    },
+    "ash-11-zielinski": {
+      "name": "Zielinski",
+      "label": "Zielinski",
+      "starting": true,
+      "side": "away",
+      "number": 11,
+      "distanceKm": 6.62,
+      "topSpeedKmh": 31.4,
+      "sprints": 27,
+      "passes": 41,
+      "passesCompleted": 26,
+      "shots": 2,
+      "shotsOnTarget": 1,
+      "passAccuracy": 63,
+      "inTheMove": {
+        "metres": 73,
+        "topSpeedKmh": 22.5
+      }
+    }
+  }
+}

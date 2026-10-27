@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image and save it as kestrel-silhouette.png in the current directory.
+
+The image: a flat, bold sports-crest emblem mark of a kestrel (a small falcon) HEAD in side profile facing right. Pure solid white silhouette on a pure solid black background, two colours only, no grey, no gradients, no outlines-only, no text, no shield, no border. The head must clearly read as a falcon: sharply hooked short beak, round eye cut out as a black circle, and the kestrel's distinctive dark vertical "moustache" stripe below the eye cut out in black. Strong geometric shapes like a Premier League club crest or a Nike-era sports logo, centred, filling about 70% of a square 1024x1024 canvas.
+Only create the one file. Do not create or modify anything else.

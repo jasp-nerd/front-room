@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image and save it as ash-silhouette.png in the current directory.
+
+The image: a flat, bold sports-crest emblem mark of a single ASH TREE leaf (Fraxinus excelsior): one compound pinnate leaf with a central stalk, three opposite pairs of pointed lance-shaped leaflets with a few crisp serrations, and one leaflet at the tip. Pure solid white silhouette on a pure solid black background, two colours only, no grey, no gradients, no text, no circle, no border. Slightly angled (tilted about 20 degrees), strong geometric shapes like a Premier League club crest. Centred, filling about 70% of a square 1024x1024 canvas. It must not look like wheat, fern or a cannabis leaf.
+Only create the one file. Do not create or modify anything else.

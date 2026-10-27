@@ -1,0 +1,25 @@
+<!-- @dsCard group="Brand" height=360 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pip</title>
+<style>
+  html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-text); }
+  .stage { display: grid; grid-template-columns: repeat(4, 160px); gap: 14px; padding: 28px; }
+  .pose { display: grid; justify-items: center; gap: 8px; padding: 14px 10px 10px; border-radius: 20px; background: var(--surface-raised); }
+  .pose p { margin: 0; font-size: 14px; font-weight: 700; }
+</style>
+</head>
+<body>
+<div id="root" class="stage"></div>
+<script>
+  const h = React.createElement;
+  const F = FrontRoom;
+  const poses = ["neutral", "wave", "whistle", "remote", "cheer", "think", "phone", "sleep"];
+  ReactDOM.createRoot(document.getElementById("root")).render(h(React.Fragment, null,
+    poses.map((pose) => h("div", { key: pose, className: "pose" }, h(F.Pip, { pose, size: 100, alt: pose }), h("p", null, pose)))
+  ));
+</script>
+</body>
+</html>

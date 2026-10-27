@@ -1,0 +1,248 @@
+/* The live cue: the replay as rooms see it, on top; what it is and where it landed, below. */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The TV shrinks with the window's height so the whole studio fits one screen. */
+.tv {
+  position: relative;
+  width: 100%;
+  max-width: calc((100vh - 500px) * 16 / 9);
+  min-width: min(100%, 360px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background: var(--navy);
+  box-shadow: 0 6px 0 var(--plate-lip);
+}
+
+.onAir {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1px var(--space-2) 1px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--signal);
+  color: var(--on-signal);
+  font-weight: 800;
+}
+
+.onAir::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* A pulled cue: the preview stays, greyed, under a stamp, so the producer sees what came off. */
+.tv[data-withdrawn] > div {
+  filter: grayscale(1) opacity(0.55);
+}
+
+.stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: var(--space-2) var(--space-5);
+  border: 4px solid var(--signal);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--signal-edge);
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 800;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-4deg);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.kind {
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--navy);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.facts,
+.langs {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px var(--space-3);
+  border: 0;
+  border-radius: var(--radius-pill);
+  font: 600 14px / 20px var(--font-text);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.facts {
+  background: var(--pitch-wash);
+  color: var(--pitch-deep);
+  font-weight: 700;
+}
+
+.langs {
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.facts:hover,
+.langs:hover {
+  box-shadow: inset 0 0 0 2px var(--line-strong);
+}
+
+.facts:focus-visible,
+.langs:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.outcome {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bar {
+  display: flex;
+  gap: 3px;
+  height: 18px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+}
+
+.bar > span {
+  flex-basis: 0;
+  transition: flex-grow 600ms ease;
+}
+
+.onTv {
+  background: var(--signal);
+}
+
+.other {
+  background: var(--navy);
+}
+
+.held {
+  background: var(--line-strong);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend strong {
+  color: var(--ink);
+}
+
+.legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.phones {
+  margin-left: auto;
+}
+
+.pulled {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-m);
+  background: var(--sun-wash);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.actions,
+.confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.confirm {
+  padding: var(--space-3);
+  border-radius: var(--radius-m);
+  background: var(--signal-wash);
+}
+
+.confirm p {
+  flex: 1 1 220px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar > span {
+    transition: none;
+  }
+}
+
+/* When the studio scrolls (short or narrow windows), the TV no longer has to share the height. */
+@media (max-height: 820px), (max-width: 1180px) {
+  .tv {
+    max-width: 720px;
+  }
+}

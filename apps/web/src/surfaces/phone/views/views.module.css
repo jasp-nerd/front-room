@@ -1,0 +1,138 @@
+/* Shared layout for the four lenses. Each lens changes what is shown, not just the wording. */
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-4) var(--space-4) var(--space-4);
+  overflow: hidden;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-family: var(--font-score);
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreClock {
+  margin-left: auto;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--sun);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.crest {
+  flex: none;
+  width: 26px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* "Your helper sent this": the fan's own robin, on the fan's own colour. */
+.helperTag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  align-self: flex-start;
+  margin: 0;
+  padding: 0 var(--space-4) 0 var(--space-1);
+  border-radius: var(--radius-pill);
+  background: var(--accent-wash);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.helperBird {
+  margin: -6px 0 -2px;
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-wrap: balance;
+}
+
+.lede {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.note {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+[data-large] .note {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.pitchCard {
+  overflow: hidden;
+  border-radius: var(--radius-m);
+}
+
+.actions {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4) var(--space-6);
+  background: var(--surface);
+}
+
+/* The helper's answer to "more like this", or why it couldn't take it. */
+.reply {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  color: var(--ink);
+  font: inherit;
+}
+
+.input::placeholder {
+  color: var(--ink-muted);
+}

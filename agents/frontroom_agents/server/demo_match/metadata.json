@@ -1,0 +1,429 @@
+{
+  "matchId": "sl-kes-ash-7",
+  "competition": "SynthLeague 2026-27",
+  "seed": 7,
+  "leagueSeed": 2026,
+  "engine": {
+    "name": "frontroom-engine",
+    "version": "0.1.0",
+    "generator": "G_B physical simulation"
+  },
+  "pitch": {
+    "length": 105.0,
+    "width": 68.0
+  },
+  "home": {
+    "clubId": "kestrel-fc",
+    "name": "Kestrel FC",
+    "short": "KES",
+    "colours": [
+      "#1F4E79",
+      "#F2C14E"
+    ],
+    "formation": "4-2-3-1",
+    "squad": [
+      {
+        "playerId": "kes-01-corrigan",
+        "name": "Emeka Corrigan",
+        "shortName": "E. Corrigan",
+        "number": 1,
+        "role": "GK",
+        "starting": true
+      },
+      {
+        "playerId": "kes-02-ibarra",
+        "name": "Joel Ibarra",
+        "shortName": "J. Ibarra",
+        "number": 2,
+        "role": "RB",
+        "starting": true
+      },
+      {
+        "playerId": "kes-04-renner",
+        "name": "Arlo Renner",
+        "shortName": "A. Renner",
+        "number": 4,
+        "role": "CB",
+        "starting": true
+      },
+      {
+        "playerId": "kes-05-fenner",
+        "name": "Silas Fenner",
+        "shortName": "S. Fenner",
+        "number": 5,
+        "role": "CB",
+        "starting": true
+      },
+      {
+        "playerId": "kes-03-hartigan",
+        "name": "Lucas Hartigan",
+        "shortName": "L. Hartigan",
+        "number": 3,
+        "role": "LB",
+        "starting": true
+      },
+      {
+        "playerId": "kes-06-mensah",
+        "name": "Theo Mensah",
+        "shortName": "T. Mensah",
+        "number": 6,
+        "role": "DM",
+        "starting": true
+      },
+      {
+        "playerId": "kes-08-petrov",
+        "name": "Tobias Petrov",
+        "shortName": "T. Petrov",
+        "number": 8,
+        "role": "CM",
+        "starting": true
+      },
+      {
+        "playerId": "kes-10-diallo",
+        "name": "Sekou Diallo",
+        "shortName": "S. Diallo",
+        "number": 10,
+        "role": "AM",
+        "starting": true
+      },
+      {
+        "playerId": "kes-07-rossetti",
+        "name": "Bastian Rossetti",
+        "shortName": "B. Rossetti",
+        "number": 7,
+        "role": "RW",
+        "starting": true
+      },
+      {
+        "playerId": "kes-09-okafor",
+        "name": "Chidi Okafor",
+        "shortName": "C. Okafor",
+        "number": 9,
+        "role": "ST",
+        "starting": true
+      },
+      {
+        "playerId": "kes-11-gilchrist",
+        "name": "Emil Gilchrist",
+        "shortName": "E. Gilchrist",
+        "number": 11,
+        "role": "LW",
+        "starting": true
+      },
+      {
+        "playerId": "kes-21-okonjo",
+        "name": "Emil Okonjo",
+        "shortName": "E. Okonjo",
+        "number": 21,
+        "role": "GK",
+        "starting": false
+      },
+      {
+        "playerId": "kes-16-radley",
+        "name": "Ilias Radley",
+        "shortName": "I. Radley",
+        "number": 16,
+        "role": "GK",
+        "starting": false
+      },
+      {
+        "playerId": "kes-12-sarr",
+        "name": "Gabriel Sarr",
+        "shortName": "G. Sarr",
+        "number": 12,
+        "role": "RB",
+        "starting": false
+      },
+      {
+        "playerId": "kes-35-seck",
+        "name": "Ben Seck",
+        "shortName": "B. Seck",
+        "number": 35,
+        "role": "CB",
+        "starting": false
+      },
+      {
+        "playerId": "kes-30-bekker",
+        "name": "Zeki Bekker",
+        "shortName": "Z. Bekker",
+        "number": 30,
+        "role": "CB",
+        "starting": false
+      },
+      {
+        "playerId": "kes-23-juhl",
+        "name": "Jude Juhl",
+        "shortName": "J. Juhl",
+        "number": 23,
+        "role": "LB",
+        "starting": false
+      },
+      {
+        "playerId": "kes-26-sorensen",
+        "name": "Declan Sorensen",
+        "shortName": "D. Sorensen",
+        "number": 26,
+        "role": "DM",
+        "starting": false
+      },
+      {
+        "playerId": "kes-29-mulvey",
+        "name": "Jonas Mulvey",
+        "shortName": "J. Mulvey",
+        "number": 29,
+        "role": "CM",
+        "starting": false
+      },
+      {
+        "playerId": "kes-25-fairley",
+        "name": "Kobe Fairley",
+        "shortName": "K. Fairley",
+        "number": 25,
+        "role": "CM",
+        "starting": false
+      },
+      {
+        "playerId": "kes-32-sandoval",
+        "name": "Isaac Sandoval",
+        "shortName": "I. Sandoval",
+        "number": 32,
+        "role": "RW",
+        "starting": false
+      },
+      {
+        "playerId": "kes-37-lindqvist",
+        "name": "Arlo Lindqvist",
+        "shortName": "A. Lindqvist",
+        "number": 37,
+        "role": "LW",
+        "starting": false
+      },
+      {
+        "playerId": "kes-13-zamora",
+        "name": "Bastian Zamora",
+        "shortName": "B. Zamora",
+        "number": 13,
+        "role": "ST",
+        "starting": false
+      }
+    ]
+  },
+  "away": {
+    "clubId": "ashvale-athletic",
+    "name": "Ashvale Athletic",
+    "short": "ASH",
+    "colours": [
+      "#8C1C13",
+      "#F4F1DE"
+    ],
+    "formation": "4-3-3",
+    "squad": [
+      {
+        "playerId": "ash-01-gilchrist",
+        "name": "Hamza Gilchrist",
+        "shortName": "H. Gilchrist",
+        "number": 1,
+        "role": "GK",
+        "starting": true
+      },
+      {
+        "playerId": "ash-02-brannigan",
+        "name": "Olu Brannigan",
+        "shortName": "O. Brannigan",
+        "number": 2,
+        "role": "RB",
+        "starting": true
+      },
+      {
+        "playerId": "ash-05-stavros",
+        "name": "Jonas Stavros",
+        "shortName": "J. Stavros",
+        "number": 5,
+        "role": "CB",
+        "starting": true
+      },
+      {
+        "playerId": "ash-36-petrov",
+        "name": "Rory Petrov",
+        "shortName": "R. Petrov",
+        "number": 36,
+        "role": "CB",
+        "starting": true
+      },
+      {
+        "playerId": "ash-03-ibarra",
+        "name": "Yannick Ibarra",
+        "shortName": "Y. Ibarra",
+        "number": 3,
+        "role": "LB",
+        "starting": true
+      },
+      {
+        "playerId": "ash-06-pardoe",
+        "name": "Jasper Pardoe",
+        "shortName": "J. Pardoe",
+        "number": 6,
+        "role": "DM",
+        "starting": true
+      },
+      {
+        "playerId": "ash-04-lund",
+        "name": "Erik Lund",
+        "shortName": "E. Lund",
+        "number": 4,
+        "role": "CM",
+        "starting": true
+      },
+      {
+        "playerId": "ash-08-juhl",
+        "name": "Harvey Juhl",
+        "shortName": "H. Juhl",
+        "number": 8,
+        "role": "CM",
+        "starting": true
+      },
+      {
+        "playerId": "ash-07-asante",
+        "name": "Emeka Asante",
+        "shortName": "E. Asante",
+        "number": 7,
+        "role": "RW",
+        "starting": true
+      },
+      {
+        "playerId": "ash-09-moreau",
+        "name": "Bastian Moreau",
+        "shortName": "B. Moreau",
+        "number": 9,
+        "role": "ST",
+        "starting": true
+      },
+      {
+        "playerId": "ash-11-zielinski",
+        "name": "Adrian Zielinski",
+        "shortName": "A. Zielinski",
+        "number": 11,
+        "role": "LW",
+        "starting": true
+      },
+      {
+        "playerId": "ash-16-ndiaye",
+        "name": "Jasper Ndiaye",
+        "shortName": "J. Ndiaye",
+        "number": 16,
+        "role": "GK",
+        "starting": false
+      },
+      {
+        "playerId": "ash-24-tembo",
+        "name": "Jonas Tembo",
+        "shortName": "J. Tembo",
+        "number": 24,
+        "role": "GK",
+        "starting": false
+      },
+      {
+        "playerId": "ash-28-barrow",
+        "name": "Joel Barrow",
+        "shortName": "J. Barrow",
+        "number": 28,
+        "role": "RB",
+        "starting": false
+      },
+      {
+        "playerId": "ash-34-achterberg",
+        "name": "Reece Achterberg",
+        "shortName": "R. Achterberg",
+        "number": 34,
+        "role": "CB",
+        "starting": false
+      },
+      {
+        "playerId": "ash-32-fairley",
+        "name": "Tomas Fairley",
+        "shortName": "T. Fairley",
+        "number": 32,
+        "role": "CB",
+        "starting": false
+      },
+      {
+        "playerId": "ash-29-mulvey",
+        "name": "Sami Mulvey",
+        "shortName": "S. Mulvey",
+        "number": 29,
+        "role": "LB",
+        "starting": false
+      },
+      {
+        "playerId": "ash-33-yoon",
+        "name": "Alfie Yoon",
+        "shortName": "A. Yoon",
+        "number": 33,
+        "role": "DM",
+        "starting": false
+      },
+      {
+        "playerId": "ash-17-ferreira",
+        "name": "Jude Ferreira",
+        "shortName": "J. Ferreira",
+        "number": 17,
+        "role": "CM",
+        "starting": false
+      },
+      {
+        "playerId": "ash-10-madsen",
+        "name": "Silas Madsen",
+        "shortName": "S. Madsen",
+        "number": 10,
+        "role": "AM",
+        "starting": false
+      },
+      {
+        "playerId": "ash-20-doucet",
+        "name": "Mikael Doucet",
+        "shortName": "M. Doucet",
+        "number": 20,
+        "role": "RW",
+        "starting": false
+      },
+      {
+        "playerId": "ash-31-wren",
+        "name": "Joel Wren",
+        "shortName": "J. Wren",
+        "number": 31,
+        "role": "LW",
+        "starting": false
+      },
+      {
+        "playerId": "ash-22-kearns",
+        "name": "Arturo Kearns",
+        "shortName": "A. Kearns",
+        "number": 22,
+        "role": "ST",
+        "starting": false
+      }
+    ]
+  },
+  "score": {
+    "home": 5,
+    "away": 2
+  },
+  "periods": [
+    {
+      "period": 1,
+      "firstFrame": 0,
+      "frames": 71998,
+      "durationMs": 2879880
+    },
+    {
+      "period": 2,
+      "firstFrame": 71998,
+      "frames": 76498,
+      "durationMs": 3059880
+    }
+  ],
+  "trackingRateHz": 25,
+  "events": 2075,
+  "steered": true,
+  "attribution": "Contains information derived from the Wyscout public dataset (Pappalardo et al., 2019, Scientific Data 6, 236, doi:10.1038/s41597-019-0247-7, CC BY 4.0) and the IDSSE dataset (Bassek et al., 2025, Scientific Data 12, 195, doi:10.1038/s41597-025-04505-y, CC BY 4.0; official match data provided by DFL / Sportec Solutions). Only aggregate statistics are stored; changes were made."
+}

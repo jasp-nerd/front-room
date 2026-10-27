@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cue.schema.json",
+  "title": "Cue",
+  "description": "A timed, machine-readable instruction to show something. The same shape feeds the studio's graphics engine, the TV in a room and each phone.",
+  "type": "object",
+  "properties": {
+    "cueId": { "$ref": "common.schema.json#/$defs/Id" },
+    "insightId": { "$ref": "common.schema.json#/$defs/Id" },
+    "template": {
+      "type": "string",
+      "enum": [
+        "where-it-started",
+        "player-tag",
+        "milestone",
+        "control-shift",
+        "caption",
+        "explainer",
+        "described-play"
+      ]
+    },
+    "destination": { "type": "string", "enum": ["studio", "room-tv", "phone"] },
+    "agentId": { "$ref": "common.schema.json#/$defs/Id", "description": "For phone cues: whose phone." },
+    "pts": { "$ref": "common.schema.json#/$defs/Pts" },
+    "clockMs": { "$ref": "common.schema.json#/$defs/ClockMs" },
+    "smpteTc": { "type": "string", "pattern": "^\\d{2}:\\d{2}:\\d{2}[:;]\\d{2}$" },
+    "dwellMs": { "type": "integer", "minimum": 0 },
+    "lang": { "$ref": "common.schema.json#/$defs/Language" },
+    "fields": {
+      "description": "Template fields, already written for this audience and language.",
+      "type": "object",
+      "additionalProperties": { "type": ["string", "number", "boolean"] }
+    },
+    "decisionId": {
+      "$ref": "common.schema.json#/$defs/Id",
+      "description": "The Room Director decision that put it on a room's TV."
+    },
+    "state": { "type": "string", "enum": ["proposed", "armed", "on-air", "held", "retracted"] },
+    "verified": { "type": "boolean" }
+  },
+  "required": [
+    "cueId",
+    "insightId",
+    "template",
+    "destination",
+    "pts",
+    "dwellMs",
+    "lang",
+    "fields",
+    "state",
+    "verified"
+  ],
+  "additionalProperties": false
+}

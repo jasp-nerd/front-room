@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "insight.schema.json",
+  "title": "Insight",
+  "description": "Something worth saying about a moment, with every fact traceable to feed events. Insights carry facts, not finished sentences: each surface writes its own words.",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/Id" },
+    "matchId": { "$ref": "common.schema.json#/$defs/Id" },
+    "kind": {
+      "type": "string",
+      "enum": ["where_it_started", "player_tag", "milestone", "control_shift", "explainer", "described_play"]
+    },
+    "pts": { "$ref": "common.schema.json#/$defs/Pts" },
+    "eventIds": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/Id" }, "minItems": 1 },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "value": { "type": ["string", "number", "boolean"] },
+          "unit": { "type": "string" },
+          "eventIds": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/Id" } }
+        },
+        "required": ["key", "value"],
+        "additionalProperties": false
+      }
+    },
+    "origin": {
+      "description": "Present for where_it_started.",
+      "type": "object",
+      "properties": {
+        "eventId": { "$ref": "common.schema.json#/$defs/Id" },
+        "playerId": { "$ref": "common.schema.json#/$defs/Id" },
+        "verdict": { "type": "string", "enum": ["decisive", "shared"] },
+        "valueAdded": {
+          "type": "number",
+          "description": "Change in possession value against a typical player in the same spot."
+        },
+        "interval": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+        "ruledOut": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/Id" } }
+      },
+      "required": ["eventId", "playerId", "verdict", "valueAdded"],
+      "additionalProperties": false
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "verified": { "type": "boolean" },
+    "trace": { "type": "string", "description": "Trace id of the agent run that produced it." }
+  },
+  "required": ["id", "matchId", "kind", "pts", "eventIds", "facts", "confidence", "verified"],
+  "additionalProperties": false
+}

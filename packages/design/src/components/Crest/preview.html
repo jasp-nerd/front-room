@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" height=220 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Crest</title>
+<style>
+  html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-text); }
+  .stage { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; padding: 32px; }
+  .item { display: flex; flex-direction: column; gap: 12px; }
+  .label { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+  .day { padding: 16px; border-radius: 16px; background: var(--surface-raised); }
+  .scale { transform-origin: top left; }
+</style>
+</head>
+<body>
+<div id="root" class="stage"></div>
+<script>
+  const h = React.createElement;
+  const F = FrontRoom;
+  const item = (label, child, className) => h("div", { className: "item" }, h("p", { className: "label" }, label), className ? h("div", { className }, child) : child);
+  ReactDOM.createRoot(document.getElementById("root")).render(h("div", { style: { display: "flex", gap: 32, alignItems: "flex-start" } },
+    [128, 64, 32, 20].map((size) => item(`${size}px`, h("div", { style: { display: "flex", gap: 12, alignItems: "flex-end" } }, h(F.Crest, { club: "kestrel", size, labelled: true }), h(F.Crest, { club: "ashvale", size, labelled: true })), undefined))
+      .map((el, i) => h("div", { key: i }, el))
+  ));
+</script>
+</body>
+</html>

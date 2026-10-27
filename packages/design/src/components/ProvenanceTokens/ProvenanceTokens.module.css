@@ -1,0 +1,34 @@
+.tokens {
+  display: inline-flex;
+  flex: none;
+  gap: 8px;
+}
+
+.token,
+.asked {
+  border-radius: 50%;
+  border: 3px solid var(--ink-muted);
+}
+
+/* What the room shares is robin: the dots of those who asked. */
+.asked {
+  border-color: var(--signal);
+  background: var(--signal);
+}
+
+.tv .token,
+.tv .asked {
+  width: 18px;
+  height: 18px;
+}
+
+.phone {
+  gap: 6px;
+}
+
+.phone .token,
+.phone .asked {
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
+}

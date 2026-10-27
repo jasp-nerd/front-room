@@ -1,0 +1,301 @@
+.decision {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.decision h1,
+.decision h2,
+.decision p,
+.decision ul,
+.decision ol {
+  margin: 0;
+  padding: 0;
+}
+
+.decision ul,
+.decision ol {
+  list-style: none;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--ink-muted);
+}
+
+/* Three steps side by side on wide screens, stacked on phones. */
+.steps {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+}
+
+.stepTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.number {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #ffffff;
+  font-family: var(--font-score);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Step 1: each fan on their own colour, with the helper robin who asks for them. */
+.fans {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.fan {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 76px;
+  padding: 0 var(--space-3) 0 var(--space-2);
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background: var(--fan-wash);
+}
+
+.face {
+  align-self: end;
+  justify-self: center;
+  height: 68px;
+}
+
+.ask {
+  min-width: 0;
+}
+
+.name {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.pick {
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.helper {
+  height: 56px;
+}
+
+.fan[data-late] {
+  background: var(--surface-sunken);
+}
+
+.fan[data-late] .face,
+.fan[data-late] .helper {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+
+.also {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--ink-muted);
+}
+
+.fan[data-late] .pick {
+  color: var(--ink-muted);
+}
+
+/* Step 2: the one navy field on the page, where Pip referees. */
+.referee {
+  overflow: hidden;
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.referee .number {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.rules {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 300px;
+}
+
+.rule {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  font-size: 16px;
+  line-height: 22px;
+  color: #d5dce6;
+}
+
+.rule strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.mark[data-kind="no"] {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.mark[data-kind="wait"] {
+  background: var(--sun);
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.pip {
+  align-self: flex-end;
+  margin: auto -8px -28px 0;
+}
+
+/* Step 3: the winner in robin, the one thing the room shares; everyone else's pick on their phone. */
+.tv {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  border-radius: var(--radius-m);
+  background: var(--signal);
+  box-shadow: 0 5px 0 var(--signal-lip);
+  color: var(--on-signal);
+}
+
+.onTv {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tvTitle {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.phonesTitle {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.phones {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.phone {
+  display: grid;
+  grid-template-columns: 40px 48px 1fr;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-3) 0 var(--space-2);
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: inset 4px 0 0 var(--fan);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.phoneFace {
+  align-self: end;
+  justify-self: center;
+  height: 38px;
+}
+
+.phoneName {
+  font-weight: 700;
+}
+
+.phonePick {
+  min-width: 0;
+  color: var(--ink-muted);
+}
+
+.phone[data-late] .phoneFace {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+
+@media (max-width: 1100px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .rules {
+    max-width: none;
+  }
+
+  .pip {
+    height: 128px;
+    margin: -8px -8px -28px auto;
+  }
+}

@@ -1,0 +1,13 @@
+**/node_modules
+**/.venv
+**/__pycache__
+**/dist
+data
+engine/tests
+apps/web/dist
+.git
+.azure
+*.log
+.env
+**/.env
+video

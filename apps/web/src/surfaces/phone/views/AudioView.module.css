@@ -1,0 +1,80 @@
+.playing {
+  align-self: flex-start;
+  margin: 0;
+  padding: 2px var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--accent-wash);
+  font-weight: 700;
+}
+
+.transcript {
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  text-wrap: pretty;
+}
+
+.progress {
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-family: var(--font-score);
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-4) 0;
+}
+
+.control,
+.pause {
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--surface-raised);
+}
+
+.control {
+  width: 72px;
+  height: 72px;
+}
+
+.pause {
+  width: 96px;
+  height: 96px;
+  background: var(--ink);
+  color: #ffffff;
+  box-shadow: 0 5px 0 var(--accent);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}

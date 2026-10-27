@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "decision.schema.json",
+  "title": "Decision",
+  "description": "One allocation of the shared screen, written to the room's ledger.",
+  "type": "object",
+  "properties": {
+    "roomId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "decisionId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "pts": {
+      "$ref": "common.schema.json#/$defs/Pts"
+    },
+    "weights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "agentId": {
+            "$ref": "common.schema.json#/$defs/Id"
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0
+          },
+          "secondsWithoutScreen": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": ["agentId", "weight", "secondsWithoutScreen"],
+        "additionalProperties": false
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "candidateId": {
+            "$ref": "common.schema.json#/$defs/Id"
+          },
+          "rawScore": {
+            "type": "number"
+          },
+          "fairScore": {
+            "type": "number"
+          },
+          "struckBy": {
+            "$ref": "common.schema.json#/$defs/Constraint"
+          },
+          "won": {
+            "type": "boolean"
+          },
+          "askedBy": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/Id"
+            },
+            "description": "Fans whose agent wanted this at least half as much as their favourite."
+          }
+        },
+        "required": ["candidateId", "rawScore", "fairScore", "won"],
+        "additionalProperties": false
+      }
+    },
+    "deliveredPrivately": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "agentId": {
+            "$ref": "common.schema.json#/$defs/Id"
+          },
+          "candidateId": {
+            "$ref": "common.schema.json#/$defs/Id"
+          }
+        },
+        "required": ["agentId", "candidateId"],
+        "additionalProperties": false
+      }
+    },
+    "decidedInMs": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": ["roomId", "decisionId", "pts", "weights", "candidates", "deliveredPrivately", "decidedInMs"],
+  "additionalProperties": false
+}

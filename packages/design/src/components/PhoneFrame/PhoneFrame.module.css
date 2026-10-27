@@ -1,0 +1,44 @@
+.device {
+  flex: none;
+  width: 414px;
+  height: 868px;
+  padding: 12px;
+  border-radius: 60px;
+  background: var(--navy);
+  box-shadow: inset 0 0 0 2px var(--navy-2);
+}
+
+.screen {
+  /* Without a fan's colour, accents fall back to the neutral mist. */
+  --accent: var(--line-strong);
+  --accent-wash: var(--surface-raised);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  height: 844px;
+  overflow: hidden;
+  border-radius: 48px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.screen[data-large] {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.status {
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  padding: 6px 40px 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}

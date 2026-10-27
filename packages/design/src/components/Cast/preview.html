@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" height=300 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cast</title>
+<style>
+  html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-text); }
+  .stage { display: grid; grid-template-columns: repeat(4, 170px); gap: 14px; padding: 28px; }
+  .fan { display: grid; justify-items: center; gap: 6px; padding: 14px 10px 12px; border-radius: 24px; }
+  .fan p { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 18px; }
+  .row { display: flex; align-items: flex-end; gap: 4px; }
+</style>
+</head>
+<body>
+<div id="root" class="stage"></div>
+<script>
+  const h = React.createElement;
+  const F = FrontRoom;
+  const fans = [["rob", "Rob"], ["ana", "Ana"], ["leo", "Leo"], ["sam", "Sam"]];
+  ReactDOM.createRoot(document.getElementById("root")).render(h(React.Fragment, null,
+    fans.map(([id, name]) => h("div", { key: id, className: "fan", style: { background: `var(--${F.castColour[id]}-wash)` } },
+      h("div", { className: "row" }, h(F.FanFace, { id, size: 96, alt: name }), h(F.Helper, { id, size: 64, alt: `${name}'s helper` })),
+      h("p", null, name)))
+  ));
+</script>
+</body>
+</html>

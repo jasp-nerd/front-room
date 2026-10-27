@@ -1,0 +1,127 @@
+{
+  "bids": [
+    {
+      "roomId": "room-demo",
+      "agentId": "rob",
+      "candidateId": "kestrel-pressing-map",
+      "utility": 0.95,
+      "partisan": true,
+      "placedAtPts": 3793500
+    },
+    {
+      "roomId": "room-demo",
+      "agentId": "ana",
+      "candidateId": "keepers-view",
+      "utility": 0.9,
+      "partisan": true,
+      "placedAtPts": 3793500
+    },
+    {
+      "roomId": "room-demo",
+      "agentId": "ana",
+      "candidateId": "where-it-started",
+      "utility": 0.55,
+      "partisan": false,
+      "placedAtPts": 3793500
+    },
+    {
+      "roomId": "room-demo",
+      "agentId": "leo",
+      "candidateId": "where-it-started",
+      "utility": 0.7,
+      "partisan": false,
+      "placedAtPts": 3793500
+    },
+    {
+      "roomId": "room-demo",
+      "agentId": "leo",
+      "candidateId": "kestrel-pressing-map",
+      "utility": 0.55,
+      "partisan": true,
+      "placedAtPts": 3793500
+    },
+    {
+      "roomId": "room-demo",
+      "agentId": "sam",
+      "candidateId": "where-it-started",
+      "utility": 0.45,
+      "partisan": false,
+      "placedAtPts": 3793500
+    },
+    {
+      "roomId": "room-demo",
+      "agentId": "sam",
+      "candidateId": "kestrel-pressing-map",
+      "utility": 0.65,
+      "partisan": true,
+      "placedAtPts": 3793500
+    }
+  ],
+  "decision": {
+    "roomId": "room-demo",
+    "decisionId": "decision-goal-1",
+    "pts": 3796000,
+    "weights": [
+      {
+        "agentId": "rob",
+        "weight": 1.0417,
+        "secondsWithoutScreen": 60
+      },
+      {
+        "agentId": "ana",
+        "weight": 1.0833,
+        "secondsWithoutScreen": 120
+      },
+      {
+        "agentId": "leo",
+        "weight": 1.375,
+        "secondsWithoutScreen": 540
+      },
+      {
+        "agentId": "sam",
+        "weight": 1.2083,
+        "secondsWithoutScreen": 300
+      }
+    ],
+    "candidates": [
+      {
+        "candidateId": "where-it-started",
+        "rawScore": 1.3484,
+        "fairScore": 1.6752,
+        "won": true,
+        "askedBy": ["ana", "leo", "sam"]
+      },
+      {
+        "candidateId": "kestrel-pressing-map",
+        "rawScore": 1.9809,
+        "fairScore": 2.3086,
+        "struckBy": "neutral-framing",
+        "won": false,
+        "askedBy": ["leo", "rob", "sam"]
+      },
+      {
+        "candidateId": "keepers-view",
+        "rawScore": 0.6207,
+        "fairScore": 0.6724,
+        "struckBy": "neutral-framing",
+        "won": false,
+        "askedBy": ["ana"]
+      }
+    ],
+    "deliveredPrivately": [
+      {
+        "agentId": "rob",
+        "candidateId": "kestrel-pressing-map"
+      },
+      {
+        "agentId": "ana",
+        "candidateId": "keepers-view"
+      },
+      {
+        "agentId": "sam",
+        "candidateId": "kestrel-pressing-map"
+      }
+    ],
+    "decidedInMs": 0.035
+  }
+}

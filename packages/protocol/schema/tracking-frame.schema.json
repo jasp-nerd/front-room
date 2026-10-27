@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tracking-frame.schema.json",
+  "title": "TrackingFrame",
+  "description": "Positions of all players and the ball at one instant (25 Hz in the feed).",
+  "type": "object",
+  "properties": {
+    "matchId": { "$ref": "common.schema.json#/$defs/Id" },
+    "frame": { "type": "integer", "minimum": 0 },
+    "period": { "type": "integer", "enum": [1, 2] },
+    "clockMs": { "$ref": "common.schema.json#/$defs/ClockMs" },
+    "ball": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number", "minimum": 0 }
+      },
+      "required": ["x", "y", "z"],
+      "additionalProperties": false
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "playerId": { "$ref": "common.schema.json#/$defs/Id" },
+          "side": { "$ref": "common.schema.json#/$defs/Side" },
+          "x": { "type": "number" },
+          "y": { "type": "number" },
+          "speed": { "type": "number", "minimum": 0, "description": "Metres per second." }
+        },
+        "required": ["playerId", "side", "x", "y", "speed"],
+        "additionalProperties": false
+      },
+      "maxItems": 22
+    }
+  },
+  "required": ["matchId", "frame", "period", "clockMs", "ball", "players"],
+  "additionalProperties": false
+}

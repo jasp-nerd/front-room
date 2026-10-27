@@ -1,0 +1,15 @@
+{
+  "planted_errors": {
+    "goals": 300,
+    "caught": {
+      "unsupported player": "300/300",
+      "invented player": "300/300",
+      "misspelt name": "300/300",
+      "digits": "300/300",
+      "wrong pass count": "300/300",
+      "decisive claim": "149/149"
+    },
+    "catch_rate": 1.0,
+    "false_rejects": "0/300"
+  }
+}

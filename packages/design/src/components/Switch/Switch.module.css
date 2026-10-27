@@ -1,0 +1,67 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 56px;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.hint {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--ink-muted);
+}
+
+.switch {
+  flex: none;
+  position: relative;
+  width: 52px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: var(--line-strong);
+  cursor: pointer;
+}
+
+/* The 44px touch target extends past the drawn track. */
+.switch::before {
+  content: "";
+  position: absolute;
+  inset: -6px -2px;
+}
+
+/* Green reads as "on"; testers read robin red as "off" or "wrong". */
+.switch[aria-checked="true"] {
+  background: var(--pitch);
+}
+
+.knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.switch[aria-checked="true"] .knob {
+  transform: translateX(20px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knob {
+    transition: none;
+  }
+}

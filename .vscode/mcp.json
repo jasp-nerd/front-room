@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "front-room-studio": {
+      "type": "http",
+      "url": "https://vu-front-room-app.purplerock-87ed4bbc.westeurope.azurecontainerapps.io/mcp/"
+    }
+  }
+}

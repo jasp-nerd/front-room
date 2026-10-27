@@ -1,0 +1,165 @@
+.scrim {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  background: #14202f99;
+}
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3) var(--space-5) var(--space-6);
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  animation: rise 240ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.sheet p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.handle {
+  align-self: center;
+  width: 40px;
+  height: 5px;
+  margin-bottom: var(--space-2);
+  border-radius: 3px;
+  background: var(--line-strong);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--space-1) 0;
+}
+
+.tv {
+  fill: var(--surface-raised);
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.tvLabel,
+.winnerLabel,
+.struckLabel,
+.rule,
+.you {
+  font-family: var(--font-text);
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+.tvLabel {
+  font-size: 14px;
+  fill: var(--ink);
+}
+
+/* The room's choice and the asks that made it are the shared thing on this sheet, so they are robin. */
+.winner {
+  fill: var(--signal);
+}
+
+.winnerLabel {
+  font-size: 14px;
+  fill: var(--on-signal);
+}
+
+.toTv,
+.bid {
+  stroke: var(--signal);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.lost {
+  stroke: var(--line-strong);
+  stroke-width: 2;
+  stroke-dasharray: 3 4;
+}
+
+.struck {
+  fill: var(--surface-raised);
+}
+
+.struckLabel {
+  font-size: 13px;
+  fill: var(--ink-muted);
+}
+
+.strike {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.rule {
+  font-size: 12px;
+  fill: var(--ink-muted);
+}
+
+.seat {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.seatAsked {
+  fill: var(--signal);
+}
+
+.you {
+  font-size: 13px;
+  fill: var(--ink);
+}
+
+.yours {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-m);
+  background: var(--accent-wash);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.yours span:first-child {
+  grid-row: span 2;
+  font-weight: 600;
+}
+
+.where {
+  font-size: 14px;
+}
+
+.small {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet {
+    animation: none;
+  }
+}

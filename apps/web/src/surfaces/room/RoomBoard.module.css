@@ -1,0 +1,278 @@
+/* The board is white paper on the mist panel; the room is drawn in pencil, the sofa in pitch green. */
+.board {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.drawing {
+  position: absolute;
+  inset: 0;
+}
+
+.board p {
+  margin: 0;
+}
+
+.chalk path {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 3;
+  stroke-linecap: square;
+}
+
+.goal {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 6;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.net line {
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.sofa > rect {
+  fill: var(--pitch-deep);
+}
+
+.sofa > .cushion {
+  fill: var(--pitch);
+}
+
+/* A bid that counted is a solid ink arrow; a bid for something the house rules struck is a dotted grey run. */
+.bid path {
+  fill: none;
+  stroke: #14202fd9;
+  stroke-linecap: round;
+}
+
+.bid polygon {
+  fill: #14202fd9;
+}
+
+.bidStruck path {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-linecap: round;
+}
+
+.bidStruck polygon {
+  fill: var(--line-strong);
+}
+
+.winning path {
+  fill: none;
+  stroke: var(--signal);
+  stroke-linecap: butt;
+}
+
+.winning polygon {
+  fill: var(--signal);
+}
+
+.winnerToken {
+  fill: var(--signal);
+}
+
+.winnerRing {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 3;
+}
+
+.struckToken {
+  fill: var(--surface-raised);
+  stroke: var(--line-strong);
+  stroke-width: 3;
+}
+
+.cross {
+  fill: none;
+  stroke: var(--ink-muted);
+  stroke-width: 4;
+  stroke-linecap: square;
+}
+
+.seatToken {
+  stroke: #ffffff;
+  stroke-width: 4;
+}
+
+.seatInitial {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.tvLabel {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.winnerLabel {
+  position: absolute;
+  width: 300px;
+}
+
+.winnerTitle,
+.struckTitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: 800;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.struckLabel {
+  position: absolute;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.struckTitle {
+  color: var(--ink-muted);
+}
+
+.note {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--ink-muted);
+}
+
+/* The decision the room shares: robin words, no card. */
+.onTv {
+  margin-top: 6px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--signal-edge);
+}
+
+.seatDropped {
+  fill: var(--surface-raised);
+  stroke: var(--ink-muted);
+  stroke-width: 3;
+  stroke-dasharray: 6 6;
+}
+
+.seatLabel {
+  position: absolute;
+  width: 172px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.seatName {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.weight {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* What this fan's agent put in for each overlay: the bid itself, nothing about the fan. */
+.bids {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 21px;
+  font-variant-numeric: tabular-nums;
+}
+
+.bids div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.bids dt {
+  color: var(--ink);
+}
+
+.bids dd {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.reason,
+.phoneText {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+.phoneText strong {
+  display: block;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.late {
+  align-self: flex-start;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.legend {
+  position: absolute;
+  left: 32px;
+  top: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--ink-muted);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendCounted,
+.legendStruck {
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.legendCounted {
+  stroke: #14202fd9;
+}
+
+.legendStruck {
+  stroke: var(--line-strong);
+  stroke-dasharray: 1.2 8.4;
+}

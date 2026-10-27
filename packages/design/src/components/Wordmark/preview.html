@@ -1,0 +1,29 @@
+<!-- @dsCard group="Brand" height=300 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wordmark</title>
+<style>
+  html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-text); }
+  .stage { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; padding: 32px; }
+  .item { display: flex; flex-direction: column; gap: 12px; }
+  .label { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+  .tile { padding: 24px 28px; border-radius: 24px; background: var(--surface-raised); }
+  .navy { background: var(--navy); }
+</style>
+</head>
+<body>
+<div id="root" class="stage"></div>
+<script>
+  const h = React.createElement;
+  const F = FrontRoom;
+  const item = (label, child, className) => h("div", { className: "item" }, h("p", { className: "label" }, label), h("div", { className: `tile ${className ?? ""}` }, child));
+  ReactDOM.createRoot(document.getElementById("root")).render(h("div", { style: { display: "flex", gap: 24, flexWrap: "wrap" } },
+    item("Lockup", h(F.Wordmark, { variant: "lockup", height: 36 })),
+    item("Lockup, reversed", h(F.Wordmark, { variant: "lockup", reversed: true, height: 36 }), "navy"),
+    item("Wordmark", h(F.Wordmark, { height: 36 }))
+  ));
+</script>
+</body>
+</html>

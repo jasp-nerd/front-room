@@ -1,0 +1,152 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: var(--space-3);
+}
+
+.shirt {
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px 10px 14px 14px;
+  font-family: var(--font-score);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.who {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.who small {
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.follows {
+  justify-self: end;
+  font-family: var(--font-score);
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.since {
+  grid-column: 2 / 4;
+  color: var(--pitch-deep);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.since[data-flat] {
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.mix {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mixLabel {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.bar {
+  display: flex;
+  gap: 2px;
+  height: 12px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+}
+
+.bar > span {
+  flex-basis: 0;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink-muted);
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend strong {
+  color: var(--ink);
+}
+
+.legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+}
+
+.hidden {
+  font-style: italic;
+}
+
+.privacy {
+  margin: auto 0 0;
+  padding-top: var(--space-1);
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 17px;
+}

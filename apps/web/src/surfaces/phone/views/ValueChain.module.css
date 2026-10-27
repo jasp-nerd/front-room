@@ -1,0 +1,65 @@
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.unit {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 20px;
+  font-variant-numeric: tabular-nums;
+}
+
+.who,
+.what,
+.bar,
+.value {
+  padding: 7px 0;
+  text-align: left;
+  vertical-align: middle;
+  border-top: 1px solid var(--line);
+}
+
+.who {
+  width: 76px;
+  font-weight: 700;
+}
+
+.bar {
+  width: 56px;
+  padding-right: var(--space-2);
+}
+
+.bar span {
+  display: block;
+  height: 8px;
+  margin-left: auto;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+}
+
+.value {
+  width: 62px;
+  text-align: right;
+  font-weight: 700;
+}
+
+/* A stronger rule above the total, and none above the first row. */
+.table tfoot tr > * {
+  border-top: 2px solid var(--line-strong);
+  font-weight: 700;
+}
+
+.table tbody tr:first-child > * {
+  border-top: 0;
+}

@@ -1,0 +1,79 @@
+{
+  "attribution": "Contains information derived from the Wyscout public dataset (Pappalardo et al., 2019, Scientific Data 6, 236, doi:10.1038/s41597-019-0247-7, CC BY 4.0) and the IDSSE dataset (Bassek et al., 2025, Scientific Data 12, 195, doi:10.1038/s41597-025-04505-y, CC BY 4.0; official match data provided by DFL / Sportec Solutions). Only aggregate statistics are stored; changes were made.",
+  "events": {
+    "source": "Wyscout public dataset, Premier League 2017/18 (CC BY 4.0)",
+    "matches": 380,
+    "actions_per_match": 1380.1237,
+    "actions_per_match_sd": 106.3109,
+    "inter_event_gap_s": {
+      "p10": 0.457,
+      "p25": 1.113,
+      "p50": 2.032,
+      "p75": 3.265,
+      "p90": 5.408
+    },
+    "passes_per_match": 864.8868,
+    "pass_accuracy": 0.8254,
+    "pass_accuracy_by_length": {
+      "0-10": 0.8277,
+      "10-20": 0.8858,
+      "20-30": 0.8512,
+      "30-40": 0.7566,
+      "40-60": 0.6077,
+      "60+": 0.4154
+    },
+    "pass_length_m": {
+      "p10": 6.881,
+      "p25": 10.982,
+      "p50": 17.129,
+      "p75": 25.534,
+      "p90": 36.607
+    },
+    "shots_per_match": 22.2395,
+    "shot_conversion": 0.1082,
+    "shot_distance_m": {
+      "p10": 8.578,
+      "p25": 12.153,
+      "p50": 17.019,
+      "p75": 24.615,
+      "p90": 29.388
+    },
+    "goals_per_match": 2.6789,
+    "goals_per_match_sd": 1.6629,
+    "results": {
+      "home": 0.4553,
+      "draw": 0.2605,
+      "away": 0.2842
+    },
+    "fouls_per_match": 21.4158,
+    "yellow_cards_per_match": 3.1553,
+    "corners_per_match": 10.2895,
+    "throw_ins_per_match": 44.8684,
+    "offsides_per_match": 4.1
+  },
+  "tracking": {
+    "source": "DFL/IDSSE open tracking, 7 German matches 2022/23 (CC BY 4.0)",
+    "matches": 7,
+    "outfield_distance_km": 10.5123,
+    "top_speed_kmh_median": 30.86,
+    "sprints_per_player": 8.7701,
+    "high_speed_distance_m": 794.4896,
+    "speed_band_shares": [
+      0.6492,
+      0.2621,
+      0.0667,
+      0.018,
+      0.0041
+    ],
+    "ball_in_play_share": 0.5512,
+    "ball_speed_kmh": {
+      "p10": 5.65,
+      "p25": 12.0471,
+      "p50": 23.2271,
+      "p75": 41.2867,
+      "p90": 57.6171
+    },
+    "team_length_m": 33.96,
+    "team_width_m": 40.52
+  }
+}

@@ -1,0 +1,52 @@
+.pitch {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* A green tactics board with white lines: a pitch at a glance. */
+.board {
+  fill: var(--pitch);
+}
+
+.chalk {
+  fill: none;
+  stroke: #ffffffb3;
+  stroke-width: 0.35;
+  stroke-linejoin: round;
+}
+
+.player {
+  stroke: #ffffff;
+  stroke-width: 0.45;
+}
+
+.number {
+  font-family: var(--font-score);
+  font-size: 2.3px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.ball {
+  fill: #ffffff;
+  stroke: var(--ink);
+  stroke-width: 0.3;
+}
+
+.pass,
+.run,
+.press {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 0.55;
+  stroke-linecap: round;
+}
+
+.run {
+  stroke-dasharray: 1.2 1;
+}
+
+.press {
+  stroke-width: 0.8;
+}

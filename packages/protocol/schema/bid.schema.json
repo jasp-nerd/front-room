@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bid.schema.json",
+  "title": "Bid",
+  "description": "A personal agent's value for one candidate overlay. It carries no profile: only the number and what the overlay needs.",
+  "type": "object",
+  "properties": {
+    "roomId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "agentId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "candidateId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "utility": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "partisan": {
+      "type": "boolean",
+      "description": "True when the rendition favours one club."
+    },
+    "placedAtPts": {
+      "$ref": "common.schema.json#/$defs/Pts"
+    }
+  },
+  "required": ["roomId", "agentId", "candidateId", "utility", "partisan", "placedAtPts"],
+  "additionalProperties": false
+}

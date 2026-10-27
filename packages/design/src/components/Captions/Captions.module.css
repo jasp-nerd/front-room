@@ -1,0 +1,27 @@
+/* Lines share one width, so two languages read as one caption block rather than a ragged stack. */
+.captions {
+  display: inline-grid;
+  justify-items: stretch;
+  gap: 4px;
+}
+
+/* Captions keep the classic black plate: viewers who rely on them know it, and it reads over anything. */
+.line {
+  margin: 0;
+  padding: 4px 18px;
+  border-radius: 10px;
+  background: #000000e0;
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* The second language steps back a little: same plate, slightly smaller and lighter. */
+.line + .line {
+  font-size: 29px;
+  line-height: 38px;
+  font-weight: 500;
+  color: #e4e6e8;
+}

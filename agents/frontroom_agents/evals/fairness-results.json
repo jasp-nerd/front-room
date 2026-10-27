@@ -1,0 +1,28 @@
+{
+  "director": {
+    "rooms": 10000,
+    "decisions": 120000,
+    "neutral_violations": 0,
+    "worst_off_fan_served": 0.615,
+    "longest_wait_median": 0,
+    "longest_wait_p95": 5,
+    "served_gini": 0.105,
+    "never_served": 0.017
+  },
+  "loudest_wins": {
+    "rooms": 10000,
+    "decisions": 120000,
+    "neutral_violations": 16194,
+    "worst_off_fan_served": 0.58,
+    "longest_wait_median": 0,
+    "longest_wait_p95": 8,
+    "served_gini": 0.116,
+    "never_served": 0.029
+  },
+  "moments_per_match": 12,
+  "favourite_reached": {
+    "fan_moments": 421152,
+    "favourite_reached": 421152,
+    "share": 1.0
+  }
+}

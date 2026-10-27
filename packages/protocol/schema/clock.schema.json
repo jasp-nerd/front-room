@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "clock.schema.json",
+  "title": "Clock",
+  "description": "The TV's playback position, published several times a second.",
+  "type": "object",
+  "properties": {
+    "roomId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "pts": {
+      "$ref": "common.schema.json#/$defs/Pts"
+    },
+    "period": {
+      "type": "integer",
+      "enum": [1, 2]
+    },
+    "clockMs": {
+      "$ref": "common.schema.json#/$defs/ClockMs"
+    },
+    "playing": {
+      "type": "boolean"
+    },
+    "behindLiveMs": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["roomId", "pts", "period", "clockMs", "playing", "behindLiveMs"],
+  "additionalProperties": false
+}

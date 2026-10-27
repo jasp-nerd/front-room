@@ -1,0 +1,33 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  height: 28px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.quiet {
+  color: var(--ink-muted);
+}
+
+.checked {
+  background: var(--pitch-wash);
+  color: var(--pitch-deep);
+}
+
+.armed {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.onTvs {
+  background: var(--signal);
+  color: var(--on-signal);
+}

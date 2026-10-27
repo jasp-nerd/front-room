@@ -1,0 +1,69 @@
+/* A 1920 × 1080 broadcast frame. Everything we draw sits inside the 90% title-safe area (96 px, 54 px). */
+.screen {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: #bfe2ff;
+}
+
+.match {
+  position: absolute;
+  inset: 0;
+}
+
+.topLeft {
+  position: absolute;
+  left: 96px;
+  top: 54px;
+}
+
+/* "Replay" on the same white card as the score bug, with the replay's clock on a sun tab. */
+.topRight {
+  position: absolute;
+  right: 96px;
+  top: 54px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 72px;
+  padding: 0 10px 0 22px;
+  border-radius: 20px;
+  background: var(--plate);
+  box-shadow: 0 6px 0 var(--plate-lip);
+  color: var(--ink-on-plate);
+}
+
+.replay {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.replayTime {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: var(--sun);
+  font-family: var(--font-score);
+  font-size: 32px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.bottom {
+  position: absolute;
+  left: 96px;
+  right: 96px;
+  bottom: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.bottom > :last-child {
+  align-self: center;
+}

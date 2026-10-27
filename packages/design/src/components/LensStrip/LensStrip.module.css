@@ -1,0 +1,60 @@
+.strip {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 48px;
+  margin: 0 var(--space-4);
+  padding-left: var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* The TV's choice is what the room shares, so it gets the one robin mark on the phone's chrome. */
+.shared {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+.now {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.sync {
+  flex: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.why {
+  flex: none;
+  align-self: stretch;
+  min-width: 44px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-left: 2px solid var(--surface);
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}

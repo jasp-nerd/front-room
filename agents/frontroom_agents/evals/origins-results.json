@@ -1,0 +1,47 @@
+{
+  "goals_in_oracle": 320,
+  "goals_graded": 280,
+  "mean_actions_per_goal": 6.5,
+  "spearman_mean": 0.196,
+  "spearman_positive_share": 0.67,
+  "strongest_action": {
+    "ours": 0.282,
+    "assist_baseline": 0.264,
+    "regain_baseline": 0.232,
+    "random_baseline": 0.207
+  },
+  "strongest_action_on_oracle_decisive_goals": {
+    "goals": 9,
+    "ours": 0.333
+  },
+  "verdict_agreement": 0.382,
+  "verdicts": {
+    "oracle decisive, ours decisive": 8,
+    "oracle decisive, ours shared": 1,
+    "oracle shared, ours decisive": 172,
+    "oracle shared, ours shared": 99
+  },
+  "calibration": {
+    "current_rule_on_test": {
+      "floor": 0.05,
+      "margin": 0.0,
+      "balanced_accuracy": 0.672,
+      "decisive_found": "9/9",
+      "shared_kept_shared": "93/271"
+    },
+    "fitted_on_calibration_run": {
+      "floor": 0.04,
+      "margin": 0.03,
+      "balanced_accuracy": 0.721,
+      "decisive_found": "6/6",
+      "shared_kept_shared": "38/86"
+    },
+    "fitted_rule_on_test": {
+      "floor": 0.04,
+      "margin": 0.03,
+      "balanced_accuracy": 0.625,
+      "decisive_found": "8/9",
+      "shared_kept_shared": "98/271"
+    }
+  }
+}

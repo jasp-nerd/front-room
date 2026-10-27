@@ -1,0 +1,236 @@
+/* The match along one line: cue cards on the left, the asks-per-minute strip on the right. */
+.lane {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
+  grid-template-rows: auto 1fr;
+  gap: var(--space-2) var(--space-5);
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  border-radius: var(--radius-l);
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+}
+
+.cues {
+  grid-column: 1;
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cue,
+.earlier {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  border-radius: var(--radius-s);
+  background: var(--navy-2);
+  font-size: 14px;
+  line-height: 18px;
+  animation: arrive 500ms ease;
+}
+
+.earlier {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #ffffff33;
+}
+
+.cue[data-state="on-tvs"] {
+  background: var(--signal);
+}
+
+.cue[data-state="withdrawn"] {
+  background: var(--navy-2);
+  box-shadow: inset 0 0 0 2px var(--sun);
+}
+
+.cue[data-state="drafted"] {
+  background: #ffffff1a;
+}
+
+.state {
+  align-self: flex-start;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-pill);
+  background: #ffffff26;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.state[data-state="on-tvs"] {
+  background: #ffffff;
+  color: var(--signal-edge);
+}
+
+.state[data-state="armed"] {
+  background: var(--sky);
+  color: var(--ink);
+}
+
+.state[data-state="checked"] {
+  background: var(--pitch);
+}
+
+.state[data-state="withdrawn"],
+.state[data-state="drafted"] {
+  background: var(--sun);
+  color: var(--ink);
+}
+
+.minute {
+  font-family: var(--font-score);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.cueTitle {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cue[data-state="withdrawn"] .cueTitle {
+  text-decoration: line-through;
+}
+
+.note {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.85;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strip {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.stripLabel {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.bars {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  gap: 1px;
+  min-height: 56px;
+}
+
+.minuteBar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  background: var(--sun);
+}
+
+.minuteBar[data-future] {
+  background: #ffffff1f;
+}
+
+.minuteBar[data-now] {
+  background: #ffffff;
+}
+
+.half {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #ffffff40;
+}
+
+.moments {
+  position: relative;
+  height: 18px;
+}
+
+.moment {
+  position: absolute;
+  top: 3px;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.moment[data-latest] {
+  top: 0;
+  width: auto;
+  height: auto;
+  margin-left: -6px;
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--signal);
+}
+
+.axis {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 11px;
+  line-height: 14px;
+  opacity: 0.7;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .lane {
+    grid-template-columns: 1fr;
+  }
+
+  .strip {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .cues {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cue,
+  .earlier {
+    animation: none;
+  }
+}

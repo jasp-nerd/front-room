@@ -1,0 +1,91 @@
+/* The decision as a chain of four cards joined by arrows: who acted, and what it produced. */
+.trace {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.chain {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--radius-m);
+  background: var(--surface-raised);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+/* An arrow in the gap to the next card. */
+.link + .link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(-1 * var(--space-5) + 6px);
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid var(--ink);
+  border-right: 3px solid var(--ink);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.link[data-won] {
+  background: var(--signal);
+  color: var(--on-signal);
+}
+
+.art {
+  display: flex;
+  align-items: flex-end;
+  height: 64px;
+  margin-bottom: var(--space-2);
+}
+
+.art img {
+  max-width: 25%;
+  object-fit: contain;
+}
+
+.kind {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--signal-edge);
+}
+
+.link[data-won] .kind {
+  color: #ffffffd9;
+}
+
+@media (max-width: 1000px) {
+  .chain {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .link + .link::before {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .chain {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

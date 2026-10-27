@@ -1,0 +1,86 @@
+# Every push and pull request: the Python side (engine, agents, room server), the web side, and the
+# evaluations that guard what reaches a shared TV. A change that lets a one-club overlay onto a TV with
+# both clubs in the room, or lets an unsupported claim past the fact check, fails the build.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Engine, agents and room server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.10.9"
+          python-version: "3.12"
+      - run: uv sync --all-packages --frozen
+      - run: uv run ruff check agents engine
+      - run: uv run ruff format --check agents engine
+      # Model-backed tests are marked `live` and skip without Azure credentials.
+      - run: uv run pytest -q
+
+  web:
+    name: Web app and design system
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @frontroom/design build
+      - run: pnpm lint
+      - run: pnpm -r typecheck
+      - run: pnpm --filter @frontroom/web build
+
+  evals:
+    name: Fairness and fact-check gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.10.9"
+          python-version: "3.12"
+      - run: uv sync --all-packages --frozen
+      - name: Fairness over 10,000 simulated rooms
+        run: |
+          uv run python -m frontroom_agents.evals.fairness --rooms 10000 --out fairness.json
+          uv run python - <<'EOF'
+          import json, sys
+          results = json.load(open("fairness.json"))
+          director, reached = results["director"], results["favourite_reached"]
+          print(f"one-club overlays with both clubs present: {director['neutral_violations']}")
+          print(f"fans' favourite picks that reached them: {reached['favourite_reached']} of {reached['fan_moments']}")
+          sys.exit(1 if director["neutral_violations"] or reached["share"] < 1 else 0)
+          EOF
+      - name: Planted errors in on-air copy
+        run: |
+          uv run python -m frontroom_agents.evals.copy
+          uv run python - <<'EOF'
+          import json, sys
+          planted = json.load(open("agents/frontroom_agents/evals/copy-results.json"))["planted_errors"]
+          print(f"catch rate {planted['catch_rate']}, false rejects {planted['false_rejects']}")
+          sys.exit(0 if planted["catch_rate"] == 1.0 and planted["false_rejects"].startswith("0/") else 1)
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: |
+            fairness.json
+            agents/frontroom_agents/evals/copy-results.json

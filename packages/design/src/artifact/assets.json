@@ -1,0 +1,152 @@
+{
+  "groups": {
+    "Logos": {
+      "tile": "l",
+      "dir": "logo",
+      "files": [
+        {
+          "name": "wordmark.svg",
+          "blob": "735b576fb8ca751ae5ccaf0001d43a43"
+        },
+        {
+          "name": "wordmark-reversed.svg",
+          "blob": "fc8818f6d0739e612248215180b3d9d7"
+        }
+      ]
+    },
+    "Icons": {
+      "tile": "l",
+      "dir": "logo/icons",
+      "files": [
+        {
+          "name": "app-icon-512.png",
+          "blob": "819a7475d68ea0eaa59be294297d0223"
+        },
+        {
+          "name": "favicon-48.png",
+          "blob": "d17e650dec052f699f452d03b463e8c2"
+        }
+      ]
+    },
+    "Pip": {
+      "tile": "l",
+      "dir": "illustration",
+      "files": [
+        {
+          "name": "pip-head.webp",
+          "blob": "0b34cf210f1670f91d937244722da0c0"
+        },
+        {
+          "name": "pip-neutral.webp",
+          "blob": "6fa91aca43979fefa9600b53d247b046"
+        },
+        {
+          "name": "pip-wave.webp",
+          "blob": "e95c52390f2a05689a5a4c03dbe51463"
+        },
+        {
+          "name": "pip-whistle.webp",
+          "blob": "45ce4f6cc69751476937a9e17dcd5bf0"
+        },
+        {
+          "name": "pip-remote.webp",
+          "blob": "7c425bfa75816d8706d74e3a0223ac27"
+        },
+        {
+          "name": "pip-cheer.webp",
+          "blob": "fe80e3a90fc0542888ada294b05aa471"
+        },
+        {
+          "name": "pip-think.webp",
+          "blob": "0c0bd030ac7b19d5d100d7436df9e6f3"
+        },
+        {
+          "name": "pip-phone.webp",
+          "blob": "8db2aa75925cfaac37ec2091c0b97743"
+        },
+        {
+          "name": "pip-sleep.webp",
+          "blob": "082fe32df3f1c553e8f911cd357dde74"
+        }
+      ]
+    },
+    "Cast": {
+      "tile": "l",
+      "dir": "illustration",
+      "files": [
+        {
+          "name": "fan-rob.webp",
+          "blob": "f32c34392cfca31c7dc11355ab06e6ee"
+        },
+        {
+          "name": "fan-ana.webp",
+          "blob": "32fa3952e56a53bd38e50f81dab81793"
+        },
+        {
+          "name": "fan-leo.webp",
+          "blob": "2043105d2a9588a81c35c88d5930064d"
+        },
+        {
+          "name": "fan-sam.webp",
+          "blob": "2d03a44018a7388220e322ed221c8759"
+        },
+        {
+          "name": "helper-sky.webp",
+          "blob": "2c1fe535bd0e97188a4b649537d9886b"
+        },
+        {
+          "name": "helper-sun.webp",
+          "blob": "c5b0c4aea8f2ec51373a4bf77d488e9a"
+        },
+        {
+          "name": "helper-pitch.webp",
+          "blob": "a7c5e1171d2ae6d3b2f9722d4e6947dd"
+        },
+        {
+          "name": "helper-pink.webp",
+          "blob": "0e16b4e14bc02f114bc082729f97c1ab"
+        }
+      ]
+    },
+    "Crests": {
+      "tile": "l",
+      "dir": "crests",
+      "files": [
+        {
+          "name": "ashvale.svg",
+          "blob": "e65f0c74ea613a24689a7d11245f3c92"
+        },
+        {
+          "name": "kestrel.svg",
+          "blob": "8015eaf072d92f2e09466859ed42a374"
+        }
+      ]
+    },
+    "Imagery": {
+      "tile": "l",
+      "dir": "illustration",
+      "files": [
+        {
+          "name": "room-hero.jpg",
+          "blob": "1520f6f32ad61ed7fb87d139d569b658"
+        },
+        {
+          "name": "spot-investigate.webp",
+          "blob": "d427f79fb83f8fdef6c6f82b153e3260"
+        },
+        {
+          "name": "spot-camera.webp",
+          "blob": "05c5b61f3aff71252b5e2394780b9a73"
+        },
+        {
+          "name": "spot-tv.webp",
+          "blob": "c1c94f41a6108cd1f4e541875bc1af70"
+        },
+        {
+          "name": "spot-phone.webp",
+          "blob": "f21d7ebb71d2b4ced88db4b4d59cf51f"
+        }
+      ]
+    }
+  }
+}
